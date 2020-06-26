@@ -4,6 +4,11 @@ namespace Org.BouncyCastle.Crypto.Tls
 {
     public abstract class ExtensionType
     {
+        public const int key_share = 51;
+        public const int psk_key_exchange_modes = 45;
+        public const int supported_versions = 43;
+        public const int compress_certificate = 27;
+         
         /*
          * RFC 2546 2.3.
          */
