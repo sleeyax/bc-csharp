@@ -84,10 +84,10 @@ namespace Org.BouncyCastle.Crypto.Tls
                 //return ProtocolVersion.SSLv3;
 
                 // "the lowest version number supported by the client"
-                //return MinimumVersion;
+                return MinimumVersion;
 
                 // "the value of ClientHello.client_version"
-                return ClientVersion;
+                //return ClientVersion;
             }
         }
 
