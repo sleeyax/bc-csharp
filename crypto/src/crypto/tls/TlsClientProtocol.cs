@@ -825,7 +825,7 @@ namespace Org.BouncyCastle.Crypto.Tls
              * TODO RFC 5077 3.4. When presenting a ticket, the client MAY generate and include a
              * Session ID in the TLS ClientHello.
              */
-            byte[] session_id = TlsUtilities.EmptyBytes;
+            byte[] session_id = mTlsClient.GetSessionId() ?? TlsUtilities.EmptyBytes;
             if (this.mTlsSession != null)
             {
                 session_id = this.mTlsSession.SessionID;

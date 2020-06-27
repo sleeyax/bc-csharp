@@ -76,6 +76,11 @@ namespace Org.BouncyCastle.Crypto.Tls
             return null;
         }
 
+        public virtual byte[] GetSessionId()
+        {
+            return null;
+        }
+
         public virtual ProtocolVersion ClientHelloRecordLayerVersion
         {
             get
