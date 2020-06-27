@@ -5,6 +5,13 @@ namespace Org.BouncyCastle.Crypto.Tls
     /// </summary>
     public abstract class CipherSuite
     {
+        /**
+         * More modern cipher suites added by Sleeyax
+         */
+        public const int TLS_AES_128_GCM_SHA256 = 0x1301;
+        public const int TLS_AES_256_GCM_SHA384 = 0x1302;
+        public const int TLS_CHACHA20_POLY1305_SHA256 = 0x1303;
+
         public const int TLS_NULL_WITH_NULL_NULL = 0x0000;
         public const int TLS_RSA_WITH_NULL_MD5 = 0x0001;
         public const int TLS_RSA_WITH_NULL_SHA = 0x0002;
@@ -350,11 +357,11 @@ namespace Org.BouncyCastle.Crypto.Tls
         {
             switch (cipherSuite)
             {
-            case TLS_EMPTY_RENEGOTIATION_INFO_SCSV:
-            case TLS_FALLBACK_SCSV:
-                return true;
-            default:
-                return false;
+                case TLS_EMPTY_RENEGOTIATION_INFO_SCSV:
+                case TLS_FALLBACK_SCSV:
+                    return true;
+                default:
+                    return false;
             }
         }
     }
